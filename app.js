@@ -40,13 +40,16 @@ fetch(data)
             button.style.top = '0';
             characterCards.innerHTML = '';
             shuffle(result);
-            result.forEach(result => {
-                let charCard = document.createElement('div');
-                charCard.classList.add('playing-card');
-                charCard.innerHTML =
-                `<img src="${result.image}" alt="" class="pic">
-                <p class="name">${result.name}</p>`
-                characterCards.appendChild(charCard);
+           result.forEach(result => {
+                if (result.image) {
+                    let charCard = document.createElement('div');
+                    charCard.classList.add('playing-card');
+                    charCard.innerHTML =
+                    `<img src="${result.image}" alt="" class="pic">
+                    <p class="name">${result.name}</p>`
+                    characterCards.appendChild(charCard);
+                }
+                
             })
         })
     })
