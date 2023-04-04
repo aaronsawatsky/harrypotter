@@ -1,4 +1,4 @@
-const data = 'https://hp-api.herokuapp.com/api/characters'
+const data = 'https://hp-api.onrender.com/api/characters'
 const button = document.querySelector('.random');
 const characterCards = document.querySelector('.character-cards');
 const container = document.querySelector('.container');
